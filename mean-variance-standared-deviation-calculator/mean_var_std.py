@@ -1,11 +1,11 @@
 import numpy as np
 
-def calculate(list):
+def calculate(input_list):
     calculations = {}
     if len(list) < 9:
         raise ValueError('List must contain nine numbers.')
     
-    data_array = np.array([list[0:3], list[3:6], list[6:9]])
+    data_array = np.array([input_list[0:3], input_list[3:6], input_list[6:9]])
 
     # cal mean
     calculations['mean'] = [np.mean(data_array, axis=0).tolist(), np.mean(data_array, axis=1).tolist(), np.mean(data_array)]
